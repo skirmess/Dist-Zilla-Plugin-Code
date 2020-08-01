@@ -1,0 +1,3 @@
+[-Freenode::DiscouragedModules]
+[-Modules::RequireExplicitInclusion]
+[-Variables::RequireInitializationForLocalVars]
