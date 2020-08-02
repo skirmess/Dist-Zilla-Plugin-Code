@@ -63,7 +63,7 @@ Version 0.001
         my @plugins;
         push @plugins, [
             'SomeUniqueName',
-            'Dist::Zilla::Plugin::Code::BeforeBuild',
+            'Dist::Zilla::Plugin::Code::TestRunner',
             {
                 test => [
                     sub {
@@ -89,7 +89,7 @@ Version 0.001
         my ( $self ) = @_;
 
         $self->add_plugins([
-            'Code::BeforeBuild',
+            'Code::TestRunner',
             {
                 test => [
                     sub {

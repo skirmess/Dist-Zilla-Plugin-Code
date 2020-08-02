@@ -63,7 +63,7 @@ Version 0.001
         my @plugins;
         push @plugins, [
             'SomeUniqueName',
-            'Dist::Zilla::Plugin::Code::BeforeBuild',
+            'Dist::Zilla::Plugin::Code::PrereqSource',
             {
                 register_prereqs => [
                     sub {
@@ -89,7 +89,7 @@ Version 0.001
         my ( $self ) = @_;
 
         $self->add_plugins([
-            'Code::BeforeBuild',
+            'Code::PrereqSource',
             {
                 register_prereqs => [
                     sub {
