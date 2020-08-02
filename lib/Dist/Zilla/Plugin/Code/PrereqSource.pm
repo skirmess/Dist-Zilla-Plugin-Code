@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::PrereqSource';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _register_prereqs_code_ref => (
+has register_prereqs => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'register_prereqs',
+    reader   => '_register_prereqs',
     required => 1,
 );
 
 sub register_prereqs {
     my $self = shift;
 
-    my $code_ref = $self->_register_prereqs_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_register_prereqs;
     return $self->$code_ref(@_);
 }
 

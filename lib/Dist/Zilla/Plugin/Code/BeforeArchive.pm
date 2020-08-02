@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::BeforeArchive';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _before_archive_code_ref => (
+has before_archive => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'before_archive',
+    reader   => '_before_archive',
     required => 1,
 );
 
 sub before_archive {
     my $self = shift;
 
-    my $code_ref = $self->_before_archive_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_before_archive;
     return $self->$code_ref(@_);
 }
 

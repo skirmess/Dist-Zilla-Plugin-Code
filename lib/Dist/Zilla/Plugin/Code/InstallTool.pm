@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::InstallTool';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _setup_installer_code_ref => (
+has setup_installer => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'setup_installer',
+    reader   => '_setup_installer',
     required => 1,
 );
 
 sub setup_installer {
     my $self = shift;
 
-    my $code_ref = $self->_setup_installer_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_setup_installer;
     return $self->$code_ref(@_);
 }
 

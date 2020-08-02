@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::FileMunger';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _munge_file_code_ref => (
+has munge_file => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'munge_file',
+    reader   => '_munge_file',
     required => 1,
 );
 
 sub munge_file {
     my $self = shift;
 
-    my $code_ref = $self->_munge_file_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_munge_file;
     return $self->$code_ref(@_);
 }
 

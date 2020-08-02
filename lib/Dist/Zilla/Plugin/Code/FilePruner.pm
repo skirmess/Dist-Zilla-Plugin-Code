@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::FilePruner';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _prune_files_code_ref => (
+has prune_files => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'prune_files',
+    reader   => '_prune_files',
     required => 1,
 );
 
 sub prune_files {
     my $self = shift;
 
-    my $code_ref = $self->_prune_files_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_prune_files;
     return $self->$code_ref(@_);
 }
 

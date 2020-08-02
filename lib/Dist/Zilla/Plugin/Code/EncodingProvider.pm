@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::EncodingProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _set_file_encodings_code_ref => (
+has set_file_encodings => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'set_file_encodings',
+    reader   => '_set_file_encodings',
     required => 1,
 );
 
 sub set_file_encodings {
     my $self = shift;
 
-    my $code_ref = $self->_set_file_encodings_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_set_file_encodings;
     return $self->$code_ref(@_);
 }
 

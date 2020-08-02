@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::BeforeBuild';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _before_build_code_ref => (
+has before_build => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'before_build',
+    reader   => '_before_build',
     required => 1,
 );
 
 sub before_build {
     my $self = shift;
 
-    my $code_ref = $self->_before_build_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_before_build;
     return $self->$code_ref(@_);
 }
 

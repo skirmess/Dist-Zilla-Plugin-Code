@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::BuildRunner';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _build_code_ref => (
+has build => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'build',
+    reader   => '_build',
     required => 1,
 );
 
 sub build {
     my $self = shift;
 
-    my $code_ref = $self->_build_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_build;
     return $self->$code_ref(@_);
 }
 

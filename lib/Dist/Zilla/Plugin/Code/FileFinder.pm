@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::FileFinder';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _find_files_code_ref => (
+has find_files => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'find_files',
+    reader   => '_find_files',
     required => 1,
 );
 
 sub find_files {
     my $self = shift;
 
-    my $code_ref = $self->_find_files_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_find_files;
     return $self->$code_ref(@_);
 }
 

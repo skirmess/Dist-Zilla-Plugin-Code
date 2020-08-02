@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::VersionProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _provide_version_code_ref => (
+has provide_version => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'provide_version',
+    reader   => '_provide_version',
     required => 1,
 );
 
 sub provide_version {
     my $self = shift;
 
-    my $code_ref = $self->_provide_version_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_provide_version;
     return $self->$code_ref(@_);
 }
 

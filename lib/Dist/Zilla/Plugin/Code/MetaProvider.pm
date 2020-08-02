@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::MetaProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _metadata_code_ref => (
+has metadata => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'metadata',
+    reader   => '_metadata',
     required => 1,
 );
 
 sub metadata {
     my $self = shift;
 
-    my $code_ref = $self->_metadata_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_metadata;
     return $self->$code_ref(@_);
 }
 

@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::ReleaseStatusProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _provide_release_status_code_ref => (
+has provide_release_status => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'provide_release_status',
+    reader   => '_provide_release_status',
     required => 1,
 );
 
 sub provide_release_status {
     my $self = shift;
 
-    my $code_ref = $self->_provide_release_status_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_provide_release_status;
     return $self->$code_ref(@_);
 }
 

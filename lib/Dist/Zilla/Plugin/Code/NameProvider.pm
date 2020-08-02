@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::NameProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _provide_name_code_ref => (
+has provide_name => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'provide_name',
+    reader   => '_provide_name',
     required => 1,
 );
 
 sub provide_name {
     my $self = shift;
 
-    my $code_ref = $self->_provide_name_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_provide_name;
     return $self->$code_ref(@_);
 }
 

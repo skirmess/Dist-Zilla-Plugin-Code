@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::TestRunner';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _test_code_ref => (
+has test => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'test',
+    reader   => '_test',
     required => 1,
 );
 
 sub test {
     my $self = shift;
 
-    my $code_ref = $self->_test_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_test;
     return $self->$code_ref(@_);
 }
 

@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::FileGatherer';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _gather_files_code_ref => (
+has gather_files => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'gather_files',
+    reader   => '_gather_files',
     required => 1,
 );
 
 sub gather_files {
     my $self = shift;
 
-    my $code_ref = $self->_gather_files_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_gather_files;
     return $self->$code_ref(@_);
 }
 

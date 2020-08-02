@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::LicenseProvider';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _provide_license_code_ref => (
+has provide_license => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'provide_license',
+    reader   => '_provide_license',
     required => 1,
 );
 
 sub provide_license {
     my $self = shift;
 
-    my $code_ref = $self->_provide_license_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_provide_license;
     return $self->$code_ref(@_);
 }
 

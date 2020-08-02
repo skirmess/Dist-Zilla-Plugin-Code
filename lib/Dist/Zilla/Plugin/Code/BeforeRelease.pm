@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::BeforeRelease';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _before_release_code_ref => (
+has before_release => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'before_release',
+    reader   => '_before_release',
     required => 1,
 );
 
 sub before_release {
     my $self = shift;
 
-    my $code_ref = $self->_before_release_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_before_release;
     return $self->$code_ref(@_);
 }
 

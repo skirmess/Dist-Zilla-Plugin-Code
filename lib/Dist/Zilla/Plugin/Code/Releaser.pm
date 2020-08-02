@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::Releaser';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _release_code_ref => (
+has release => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'release',
+    reader   => '_release',
     required => 1,
 );
 
 sub release {
     my $self = shift;
 
-    my $code_ref = $self->_release_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_release;
     return $self->$code_ref(@_);
 }
 

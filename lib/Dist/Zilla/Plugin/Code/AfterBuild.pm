@@ -13,19 +13,17 @@ with 'Dist::Zilla::Role::AfterBuild';
 
 use MooseX::Types::Moose qw(CodeRef);
 
-has _after_build_code_ref => (
+has after_build => (
     is       => 'ro',
     isa      => 'CodeRef',
-    init_arg => 'after_build',
+    reader   => '_after_build',
     required => 1,
 );
 
 sub after_build {
     my $self = shift;
 
-    my $code_ref = $self->_after_build_code_ref;
-    return if !defined $code_ref;
-
+    my $code_ref = $self->_after_build;
     return $self->$code_ref(@_);
 }
 
