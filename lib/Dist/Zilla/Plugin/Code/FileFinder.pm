@@ -53,7 +53,6 @@ Version 0.001
 
     use Moose;
     with 'Dist::Zilla::Role::PluginBundle';
-    use Dist::Zilla::Plugin::Code::FileFinder;
 
     sub bundle_config {
         my ( $class, $section ) = @_;
@@ -81,7 +80,6 @@ Version 0.001
 
     use Moose;
     with 'Dist::Zilla::Role::PluginBundle::Easy';
-    use Dist::Zilla::Plugin::Code::FileFinder;
 
     sub configure {
         my ( $self ) = @_;
