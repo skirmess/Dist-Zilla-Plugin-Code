@@ -52,6 +52,10 @@ DESCRIPTION
 
       something that prunes files from the distribution
 
+    Dist::Zilla::Plugin::Code::Inizialization
+
+      something that runs when plugins are initialized
+
     Dist::Zilla::Plugin::Code::InstallTool
 
       something that creates an install program for a dist
@@ -87,6 +91,10 @@ DESCRIPTION
     Dist::Zilla::Plugin::Code::VersionProvider
 
       something that provides a version number for the dist
+
+    Dist::Zilla::PluginBundle::Code
+
+      a dynamic bundle
 
 SUPPORT
 

@@ -2,6 +2,8 @@ Revision history for Dist-Zilla-Plugin-Code
 
 {{$NEXT}}
 
+  - New module Dist::Zilla::Plugin::Code::Initialization
+  - New module Dist::Zilla::PluginBundle::Code
   - Fixed synopsis
   - Improved error message if required arg is not given
 

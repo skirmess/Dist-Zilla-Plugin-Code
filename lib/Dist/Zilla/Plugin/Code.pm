@@ -70,6 +70,10 @@ something that munges files within the distribution
 
 something that prunes files from the distribution
 
+=item L<Dist::Zilla::Plugin::Code::Inizialization>
+
+something that runs when plugins are initialized
+
 =item L<Dist::Zilla::Plugin::Code::InstallTool>
 
 something that creates an install program for a dist
@@ -105,6 +109,10 @@ something that tests the dist
 =item L<Dist::Zilla::Plugin::Code::VersionProvider>
 
 something that provides a version number for the dist
+
+=item L<Dist::Zilla::PluginBundle::Code>
+
+a dynamic bundle
 
 =back
 

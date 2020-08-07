@@ -43,6 +43,8 @@
             "Dist::Zilla::Role::LicenseProvider" : "0",
             "Dist::Zilla::Role::MetaProvider" : "0",
             "Dist::Zilla::Role::NameProvider" : "0",
+            "Dist::Zilla::Role::Plugin" : "0",
+            "Dist::Zilla::Role::PluginBundle" : "0",
             "Dist::Zilla::Role::PrereqSource" : "0",
             "Dist::Zilla::Role::ReleaseStatusProvider" : "0",
             "Dist::Zilla::Role::Releaser" : "0",
@@ -58,9 +60,9 @@
       },
       "test" : {
          "requires" : {
+            "Capture::Tiny" : "0",
             "Dist::Zilla::File::InMemory" : "0",
             "Dist::Zilla::Role::FileFinderUser" : "0",
-            "Dist::Zilla::Role::PluginBundle" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
             "Test::DZil" : "0",
             "Test::Fatal" : "0",
@@ -120,6 +122,10 @@
          "file" : "lib/Dist/Zilla/Plugin/Code/FilePruner.pm",
          "version" : "0.001"
       },
+      "Dist::Zilla::Plugin::Code::Initialization" : {
+         "file" : "lib/Dist/Zilla/Plugin/Code/Initialization.pm",
+         "version" : "0.001"
+      },
       "Dist::Zilla::Plugin::Code::InstallTool" : {
          "file" : "lib/Dist/Zilla/Plugin/Code/InstallTool.pm",
          "version" : "0.001"
@@ -154,6 +160,10 @@
       },
       "Dist::Zilla::Plugin::Code::VersionProvider" : {
          "file" : "lib/Dist/Zilla/Plugin/Code/VersionProvider.pm",
+         "version" : "0.001"
+      },
+      "Dist::Zilla::PluginBundle::Code" : {
+         "file" : "lib/Dist/Zilla/PluginBundle/Code.pm",
          "version" : "0.001"
       }
    },

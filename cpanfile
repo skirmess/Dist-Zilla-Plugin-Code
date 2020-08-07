@@ -13,6 +13,8 @@ requires 'Dist::Zilla::Role::InstallTool';
 requires 'Dist::Zilla::Role::LicenseProvider';
 requires 'Dist::Zilla::Role::MetaProvider';
 requires 'Dist::Zilla::Role::NameProvider';
+requires 'Dist::Zilla::Role::Plugin';
+requires 'Dist::Zilla::Role::PluginBundle';
 requires 'Dist::Zilla::Role::PrereqSource';
 requires 'Dist::Zilla::Role::ReleaseStatusProvider';
 requires 'Dist::Zilla::Role::Releaser';
@@ -31,9 +33,9 @@ on configure => sub {
 };
 
 on test => sub {
+    requires 'Capture::Tiny';
     requires 'Dist::Zilla::File::InMemory';
     requires 'Dist::Zilla::Role::FileFinderUser';
-    requires 'Dist::Zilla::Role::PluginBundle';
     requires 'Dist::Zilla::Role::PluginBundle::Easy';
     requires 'Test::DZil';
     requires 'Test::Fatal';
