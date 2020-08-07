@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Moose;
 use namespace::autoclean;
@@ -43,7 +43,7 @@ Dist::Zilla::Plugin::Code::BeforeArchive - something that runs before the archiv
 
 =head1 VERSION
 
-Version 0.001
+Version 0.002
 
 =head1 SYNOPSIS
 
