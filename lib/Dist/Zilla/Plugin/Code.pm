@@ -70,7 +70,7 @@ something that munges files within the distribution
 
 something that prunes files from the distribution
 
-=item L<Dist::Zilla::Plugin::Code::Inizialization>
+=item L<Dist::Zilla::Plugin::Code::Initialization>
 
 something that runs when plugins are initialized
 

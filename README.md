@@ -52,7 +52,7 @@ Version 0.002
 
     something that prunes files from the distribution
 
-- [Dist::Zilla::Plugin::Code::Inizialization](https://metacpan.org/pod/Dist::Zilla::Plugin::Code::Inizialization)
+- [Dist::Zilla::Plugin::Code::Initialization](https://metacpan.org/pod/Dist::Zilla::Plugin::Code::Initialization)
 
     something that runs when plugins are initialized
 
