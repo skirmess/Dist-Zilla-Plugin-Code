@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use Moose;
 use namespace::autoclean;
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::Code::Releaser - something that makes a release of the dist
 
 =head1 VERSION
 
-Version 0.003
+Version 0.004
 
 =head1 SYNOPSIS
 

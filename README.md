@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Code - dynamically create plugins from a bundle
 
 # VERSION
 
-Version 0.003
+Version 0.004
 
 # DESCRIPTION
 
