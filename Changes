@@ -2,6 +2,8 @@ Revision history for Dist-Zilla-Plugin-Code
 
 {{$NEXT}}
 
+  - Documentation update
+
 0.004  2021-07-24 20:46:01 UTC
 
   - Added a dependency on Config::MVP 2.200012 (https://github.com/rjbs/Config-MVP/issues/13)

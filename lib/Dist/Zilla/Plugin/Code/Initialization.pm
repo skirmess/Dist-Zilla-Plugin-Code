@@ -107,11 +107,6 @@ This plugin implements the L<Dist::Zilla::Role::Plugin> role and attaches
 to the C<plugin_from_config> method, that is fired when the plugins and
 bundles get initialized. (This plugin runs at the same time as bundles.)
 
-B<Note:> Because of the way L<Config::MVP> processes the arguments you have
-to put the sub reference inside an array reference. Otherwise you get an
-I<Not an ARRAY reference> error. See
-L<https://github.com/rjbs/Config-MVP/issues/13>.
-
 =head1 SUPPORT
 
 =head2 Bugs / Feature Requests

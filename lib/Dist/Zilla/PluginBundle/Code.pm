@@ -112,11 +112,6 @@ role immediately resolve other bundles themselves, there is no way to push
 a bundle back onto the stack. Therefore it doesn't make sense to use this
 code bundle inside L<Dist::Zilla::Role::PluginBundle::Easy> bundles.
 
-B<Note:> Because of the way L<Config::MVP> processes the arguments you have
-to put the sub reference inside an array reference. Otherwise you get an
-I<Not an ARRAY reference> error. See
-L<https://github.com/rjbs/Config-MVP/issues/13>.
-
 =head1 SUPPORT
 
 =head2 Bugs / Feature Requests
