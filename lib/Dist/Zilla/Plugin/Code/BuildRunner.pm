@@ -11,6 +11,7 @@ use namespace::autoclean;
 
 with 'Dist::Zilla::Role::BuildRunner';
 
+use Config::MVP 2.200012 ();    # https://github.com/rjbs/Config-MVP/issues/13
 use MooseX::Types::Moose qw(CodeRef);
 
 has build => (
@@ -62,12 +63,10 @@ Version 0.003
             'SomeUniqueName',
             'Dist::Zilla::Plugin::Code::BuildRunner',
             {
-                build => [
-                    sub {
-                        my ( $self, $build_dir ) = @_;
-                        $self->log("Hello world");
-                    },
-                ],
+                build => sub {
+                    my ( $self, $build_dir ) = @_;
+                    $self->log('Hello world');
+                },
             },
         ];
 
@@ -87,12 +86,10 @@ Version 0.003
         $self->add_plugins([
             'Code::BuildRunner',
             {
-                build => [
-                    sub {
-                        my ( $self, $build_dir ) = @_;
-                        $self->log("Hello world");
-                    },
-                ],
+                build => sub {
+                    my ( $self, $build_dir ) = @_;
+                    $self->log('Hello world');
+                },
             },
         ]);
 

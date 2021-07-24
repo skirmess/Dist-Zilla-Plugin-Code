@@ -1,3 +1,4 @@
+requires 'Config::MVP', '2.200012';
 requires 'Dist::Zilla::Role::AfterBuild';
 requires 'Dist::Zilla::Role::AfterRelease';
 requires 'Dist::Zilla::Role::BeforeArchive';
@@ -171,7 +172,6 @@ on develop => sub {
         requires 'CPAN::Meta::Prereqs::Filter';
         requires 'CPAN::Meta::Requirements';
         requires 'Carp';
-        requires 'Config::MVP', '2.200012';
         requires 'Dist::Zilla';
         requires 'Dist::Zilla::File::InMemory';
         requires 'Dist::Zilla::File::OnDisk';

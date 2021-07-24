@@ -11,6 +11,7 @@ use namespace::autoclean;
 
 with 'Dist::Zilla::Role::BeforeBuild';
 
+use Config::MVP 2.200012 ();    # https://github.com/rjbs/Config-MVP/issues/13
 use MooseX::Types::Moose qw(CodeRef);
 
 has before_build => (
@@ -62,12 +63,10 @@ Version 0.003
             'SomeUniqueName',
             'Dist::Zilla::Plugin::Code::BeforeBuild',
             {
-                before_build => [
-                    sub {
-                        my ($self) = @_;
-                        $self->log("Hello world");
-                    },
-                ],
+                before_build => sub {
+                    my ($self) = @_;
+                    $self->log('Hello world');
+                },
             },
         ];
 
@@ -87,12 +86,10 @@ Version 0.003
         $self->add_plugins([
             'Code::BeforeBuild',
             {
-                before_build => [
-                    sub {
-                        my ($self) = @_;
-                        $self->log("Hello world");
-                    },
-                ],
+                before_build => sub {
+                    my ($self) = @_;
+                    $self->log('Hello world');
+                },
             },
         ]);
 
