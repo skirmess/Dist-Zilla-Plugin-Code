@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 1;
 
@@ -20,7 +20,7 @@ Dist::Zilla::Plugin::Code - dynamically create plugins from a bundle
 
 =head1 VERSION
 
-Version 0.004
+Version 0.005
 
 =head1 DESCRIPTION
 

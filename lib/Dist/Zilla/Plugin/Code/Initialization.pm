@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 use Moose;
 use namespace::autoclean;
@@ -49,7 +49,7 @@ Dist::Zilla::Plugin::Code::Initialization - something that runs when plugins are
 
 =head1 VERSION
 
-Version 0.004
+Version 0.005
 
 =head1 SYNOPSIS
 
