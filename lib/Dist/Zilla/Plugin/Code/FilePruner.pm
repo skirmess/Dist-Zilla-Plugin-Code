@@ -131,7 +131,7 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
-L<Dist::Zilla>, L<lib>
+L<Dist::Zilla>, L<Dist::Zilla::Role::FilePruner>
 
 =cut
 
