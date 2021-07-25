@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 use Moose;
 use namespace::autoclean;
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::Code::BuildRunner - something used as a delegating agent du
 
 =head1 VERSION
 
-Version 0.005
+Version 0.006
 
 =head1 SYNOPSIS
 
