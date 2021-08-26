@@ -1,3 +1,4 @@
+requires 'Carp';
 requires 'Config::MVP', '2.200012';
 requires 'Dist::Zilla::Role::AfterBuild';
 requires 'Dist::Zilla::Role::AfterRelease';
@@ -172,14 +173,12 @@ on develop => sub {
         requires 'CPAN::Meta::Prereqs';
         requires 'CPAN::Meta::Prereqs::Filter';
         requires 'CPAN::Meta::Requirements';
-        requires 'Carp';
         requires 'Data::Dumper';
         requires 'Dist::Zilla';
         requires 'Dist::Zilla::File::InMemory';
         requires 'Dist::Zilla::File::OnDisk';
         requires 'Dist::Zilla::Plugin::AutoPrereqs';
         requires 'Dist::Zilla::Plugin::AutoPrereqs::Perl::Critic';
-        requires 'Dist::Zilla::Plugin::Bootstrap::lib';
         requires 'Dist::Zilla::Plugin::CheckChangesHasContent';
         requires 'Dist::Zilla::Plugin::CheckIssues';
         requires 'Dist::Zilla::Plugin::CheckMetaResources';

@@ -2,6 +2,8 @@ Revision history for Dist-Zilla-Plugin-Code
 
 {{$NEXT}}
 
+  - The Code::FileMunger plugin supports the munge_files method
+
 0.006  2021-07-25 00:12:47 UTC
 
   - Documentation update

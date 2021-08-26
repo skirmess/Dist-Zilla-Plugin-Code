@@ -27,6 +27,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
             "Config::MVP" : "2.200012",
             "Dist::Zilla::Role::AfterBuild" : "0",
             "Dist::Zilla::Role::AfterRelease" : "0",

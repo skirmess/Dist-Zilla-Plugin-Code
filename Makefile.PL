@@ -15,6 +15,7 @@ my %WriteMakefileArgs = (
     MIN_PERL_VERSION => '5.006',
     NAME             => 'Dist::Zilla::Plugin::Code',
     PREREQ_PM        => {
+        Carp                                       => 0,
         'Config::MVP'                              => '2.200012',
         'Dist::Zilla::Role::AfterBuild'            => 0,
         'Dist::Zilla::Role::AfterRelease'          => 0,
@@ -63,6 +64,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
     'Capture::Tiny'                            => 0,
+    Carp                                       => 0,
     'Config::MVP'                              => '2.200012',
     'Dist::Zilla::File::InMemory'              => 0,
     'Dist::Zilla::Role::AfterBuild'            => 0,
