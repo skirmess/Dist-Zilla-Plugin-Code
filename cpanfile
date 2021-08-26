@@ -169,21 +169,27 @@ on develop => sub {
 feature 'dzil', 'Dist::Zilla' => sub {
 on develop => sub {
         requires 'App::Prove';
+        requires 'CPAN::Meta::Prereqs';
         requires 'CPAN::Meta::Prereqs::Filter';
         requires 'CPAN::Meta::Requirements';
         requires 'Carp';
+        requires 'Data::Dumper';
         requires 'Dist::Zilla';
         requires 'Dist::Zilla::File::InMemory';
         requires 'Dist::Zilla::File::OnDisk';
         requires 'Dist::Zilla::Plugin::AutoPrereqs';
         requires 'Dist::Zilla::Plugin::AutoPrereqs::Perl::Critic';
+        requires 'Dist::Zilla::Plugin::Bootstrap::lib';
         requires 'Dist::Zilla::Plugin::CheckChangesHasContent';
         requires 'Dist::Zilla::Plugin::CheckIssues';
         requires 'Dist::Zilla::Plugin::CheckMetaResources';
         requires 'Dist::Zilla::Plugin::CheckPrereqsIndexed';
         requires 'Dist::Zilla::Plugin::CheckSelfDependency';
         requires 'Dist::Zilla::Plugin::CheckStrictVersion';
+        requires 'Dist::Zilla::Plugin::Code::AfterBuild';
+        requires 'Dist::Zilla::Plugin::Code::FileMunger';
         requires 'Dist::Zilla::Plugin::Code::MetaProvider';
+        requires 'Dist::Zilla::Plugin::Code::PrereqSource';
         requires 'Dist::Zilla::Plugin::ConfirmRelease';
         requires 'Dist::Zilla::Plugin::ExecDir';
         requires 'Dist::Zilla::Plugin::FinderCode';
@@ -204,7 +210,6 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::ManifestSkip';
         requires 'Dist::Zilla::Plugin::MetaJSON';
         requires 'Dist::Zilla::Plugin::MetaNoIndex';
-        requires 'Dist::Zilla::Plugin::MetaProvides::Package';
         requires 'Dist::Zilla::Plugin::MetaYAML';
         requires 'Dist::Zilla::Plugin::NextRelease';
         requires 'Dist::Zilla::Plugin::PromptIfStale';
@@ -219,7 +224,6 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::VersionFromMainModule';
         requires 'Dist::Zilla::Plugin::lib';
         requires 'Dist::Zilla::Role::FileFinderUser';
-        requires 'Dist::Zilla::Role::PPI';
         requires 'Dist::Zilla::Role::PluginBundle::Config::Slicer';
         requires 'Dist::Zilla::Role::PluginBundle::Easy';
         requires 'Dist::Zilla::Role::TextTemplate';
@@ -237,10 +241,11 @@ on develop => sub {
         requires 'Moose', '0.99';
         requires 'Moose::Role';
         requires 'Perl::MinimumVersion', '1.26';
-        requires 'Perl::PrereqScanner', '1.016';
+        requires 'Perl::Tidy';
         requires 'Safe::Isa';
         requires 'Scalar::Util';
         requires 'Term::ANSIColor';
+        requires 'YAML::Tiny';
         requires 'constant';
         requires 'namespace::autoclean', '0.09';
         requires 'perl', '5.010';
