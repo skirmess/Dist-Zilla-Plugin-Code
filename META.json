@@ -4,6 +4,7 @@
       "Sven Kirmess <sven.kirmess@kzone.ch>"
    ],
    "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla, CPAN::Meta::Converter",
    "license" : [
       "freebsd"
    ],
@@ -86,7 +87,7 @@
          "web" : "https://github.com/skirmess/Dist-Zilla-Plugin-Code"
       }
    },
-   "version" : "0.006",
+   "version" : "0.007",
    "x_spdx_expression" : "BSD-2-Clause-FreeBSD"
 }
 

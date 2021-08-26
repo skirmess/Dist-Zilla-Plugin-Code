@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 use Moose;
 use namespace::autoclean;
@@ -68,7 +68,7 @@ Dist::Zilla::Plugin::Code::FileMunger - something that munges files within the d
 
 =head1 VERSION
 
-Version 0.006
+Version 0.007
 
 =head1 SYNOPSIS
 

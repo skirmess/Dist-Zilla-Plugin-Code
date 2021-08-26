@@ -17,6 +17,7 @@ configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
 dynamic_config: 0
+generated_by: 'Dist::Zilla, CPAN::Meta::Converter'
 license: open_source
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -61,5 +62,5 @@ resources:
   bugtracker: https://github.com/skirmess/Dist-Zilla-Plugin-Code/issues
   homepage: https://github.com/skirmess/Dist-Zilla-Plugin-Code
   repository: https://github.com/skirmess/Dist-Zilla-Plugin-Code.git
-version: '0.006'
+version: '0.007'
 x_spdx_expression: BSD-2-Clause-FreeBSD
