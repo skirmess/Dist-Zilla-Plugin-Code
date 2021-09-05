@@ -36,18 +36,22 @@ on configure => sub {
 
 on test => sub {
     requires 'Capture::Tiny';
+    requires 'Cwd';
     requires 'Dist::Zilla::File::InMemory';
     requires 'Dist::Zilla::Role::FileFinderUser';
     requires 'Dist::Zilla::Role::PluginBundle::Easy';
+    requires 'Exporter', '5.57';
+    requires 'File::Basename';
+    requires 'File::Path';
+    requires 'File::Spec';
     requires 'Test::DZil';
     requires 'Test::Fatal';
     requires 'Test::More', '0.88';
-    requires 'Test::TempDir::Tiny';
     requires 'lib';
 };
 
 on develop => sub {
-    requires 'CPANPLUS';
+    requires 'CPAN';
     requires 'JSON::PP';
     requires 'Module::Info';
     requires 'Path::Tiny';
@@ -186,8 +190,7 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::CheckSelfDependency';
         requires 'Dist::Zilla::Plugin::CheckStrictVersion';
         requires 'Dist::Zilla::Plugin::Code::AfterBuild';
-        requires 'Dist::Zilla::Plugin::Code::FileMunger';
-        requires 'Dist::Zilla::Plugin::Code::MetaProvider';
+        requires 'Dist::Zilla::Plugin::Code::FileMunger', '0.007';
         requires 'Dist::Zilla::Plugin::Code::PrereqSource';
         requires 'Dist::Zilla::Plugin::ConfirmRelease';
         requires 'Dist::Zilla::Plugin::ExecDir';
@@ -204,7 +207,7 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::Git::Tag';
         requires 'Dist::Zilla::Plugin::GithubMeta';
         requires 'Dist::Zilla::Plugin::License';
-        requires 'Dist::Zilla::Plugin::MakeMaker::Awesome';
+        requires 'Dist::Zilla::Plugin::MakeMaker::Awesome', '0.49';
         requires 'Dist::Zilla::Plugin::Manifest';
         requires 'Dist::Zilla::Plugin::ManifestSkip';
         requires 'Dist::Zilla::Plugin::MetaJSON';
@@ -223,7 +226,6 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::VersionFromMainModule';
         requires 'Dist::Zilla::Plugin::lib';
         requires 'Dist::Zilla::Role::FileFinderUser';
-        requires 'Dist::Zilla::Role::PluginBundle::Config::Slicer';
         requires 'Dist::Zilla::Role::PluginBundle::Easy';
         requires 'Dist::Zilla::Role::TextTemplate';
         requires 'Dist::Zilla::Types', '6.000';
@@ -236,6 +238,7 @@ on develop => sub {
         requires 'File::pushd';
         requires 'List::Util';
         requires 'Module::CPANfile', '1.1004';
+        requires 'Module::CoreList', '2.77';
         requires 'Module::Metadata';
         requires 'Moose', '0.99';
         requires 'Moose::Role';
@@ -248,5 +251,6 @@ on develop => sub {
         requires 'constant';
         requires 'namespace::autoclean', '0.09';
         requires 'perl', '5.010';
+        requires 'version', '0.77';
 };
 };
