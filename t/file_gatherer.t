@@ -37,7 +37,7 @@ sub main {
     my $class     = 'Dist::Zilla::Plugin::Code::FileGatherer';
     my $code_name = 'gather_files';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     note('Dist::Zilla::Role::PluginBundle');
     {

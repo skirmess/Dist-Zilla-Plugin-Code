@@ -37,7 +37,7 @@ sub main {
     my $class     = 'Dist::Zilla::Plugin::Code::MetaProvider';
     my $code_name = 'metadata';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     note('Dist::Zilla::Role::PluginBundle');
     {

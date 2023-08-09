@@ -39,7 +39,7 @@ sub main {
     my $class     = 'Dist::Zilla::Plugin::Code::FileFinder';
     my $code_name = 'find_files';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     note('Dist::Zilla::Role::PluginBundle');
     {

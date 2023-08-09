@@ -37,7 +37,7 @@ sub main {
     my $class     = 'Dist::Zilla::Plugin::Code::Releaser';
     my $code_name = 'release';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     note('Dist::Zilla::Role::PluginBundle');
     {

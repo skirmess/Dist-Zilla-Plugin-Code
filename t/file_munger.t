@@ -36,7 +36,7 @@ main();
 sub main {
     my $class = 'Dist::Zilla::Plugin::Code::FileMunger';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     for my $code_name (qw(munge_file munge_files)) {
 

@@ -37,7 +37,7 @@ main();
 sub main {
     my $class = 'Dist::Zilla::PluginBundle::Code';
 
-    use_ok( $class, "$class can be use'd" );
+    use_ok($class);
 
     note('Dist::Zilla::Role::PluginBundle');
     {
