@@ -20,7 +20,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::Code;
 
-our $VERSION = '0.007';
+our $VERSION = '0.008';
 
 1;
 
@@ -36,7 +36,7 @@ Dist::Zilla::Plugin::Code - dynamically create plugins from a bundle
 
 =head1 VERSION
 
-Version 0.007
+Version 0.008
 
 =head1 DESCRIPTION
 

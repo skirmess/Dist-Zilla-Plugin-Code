@@ -20,7 +20,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::Code::Releaser;
 
-our $VERSION = '0.007';
+our $VERSION = '0.008';
 
 use Moose;
 use namespace::autoclean;
@@ -60,7 +60,7 @@ Dist::Zilla::Plugin::Code::Releaser - something that makes a release of the dist
 
 =head1 VERSION
 
-Version 0.007
+Version 0.008
 
 =head1 SYNOPSIS
 

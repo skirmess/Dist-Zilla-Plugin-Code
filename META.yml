@@ -67,4 +67,4 @@ resources:
   bugtracker: https://github.com/skirmess/Dist-Zilla-Plugin-Code/issues
   homepage: https://github.com/skirmess/Dist-Zilla-Plugin-Code
   repository: https://github.com/skirmess/Dist-Zilla-Plugin-Code.git
-version: '0.007'
+version: '0.008'
