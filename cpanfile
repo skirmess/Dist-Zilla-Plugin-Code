@@ -52,12 +52,12 @@ on test => sub {
 };
 
 on develop => sub {
-    requires 'CPAN';
     requires 'JSON::PP';
     requires 'List::Util', '1.33';
+    requires 'MetaCPAN::Client';
     requires 'Module::Info';
     requires 'Path::Tiny';
-    requires 'Perl::Critic', '1.140';
+    requires 'Perl::Critic', '1.150';
     requires 'Perl::Critic::MergeProfile';
     requires 'Perl::Critic::Policy::Bangs::ProhibitBitwiseOperators', '1.12';
     requires 'Perl::Critic::Policy::Bangs::ProhibitDebuggingModules', '1.12';
@@ -109,8 +109,8 @@ on develop => sub {
     requires 'Perl::Critic::Policy::Documentation::RequireFilenameMarkup', '99';
     requires 'Perl::Critic::Policy::Documentation::RequireLinkedURLs', '99';
     requires 'Perl::Critic::Policy::HTTPCookies', '0.54';
-    requires 'Perl::Critic::Policy::Lax::ProhibitComplexMappings::LinesNotStatements', '0.013';
-    requires 'Perl::Critic::Policy::Lax::RequireExplicitPackage::ExceptForPragmata', '0.013';
+    requires 'Perl::Critic::Policy::Lax::ProhibitComplexMappings::LinesNotStatements', '0.014';
+    requires 'Perl::Critic::Policy::Lax::RequireExplicitPackage::ExceptForPragmata', '0.014';
     requires 'Perl::Critic::Policy::Modules::PerlMinimumVersion', '1.003';
     requires 'Perl::Critic::Policy::Modules::ProhibitModuleShebang', '99';
     requires 'Perl::Critic::Policy::Modules::ProhibitPOSIXimport', '99';
@@ -126,8 +126,8 @@ on develop => sub {
     requires 'Perl::Critic::Policy::Moose::RequireMakeImmutable', '1.05';
     requires 'Perl::Critic::Policy::Subroutines::ProhibitExportingUndeclaredSubs', '0.06';
     requires 'Perl::Critic::Policy::Subroutines::ProhibitQualifiedSubDeclarations', '0.06';
-    requires 'Perl::Critic::Policy::Tics::ProhibitManyArrows', '0.009';
-    requires 'Perl::Critic::Policy::Tics::ProhibitUseBase', '0.009';
+    requires 'Perl::Critic::Policy::Tics::ProhibitManyArrows', '0.010';
+    requires 'Perl::Critic::Policy::Tics::ProhibitUseBase', '0.010';
     requires 'Perl::Critic::Policy::TryTiny::RequireBlockTermination', '0.03';
     requires 'Perl::Critic::Policy::TryTiny::RequireUse', '0.05';
     requires 'Perl::Critic::Policy::ValuesAndExpressions::ConstantBeforeLt', '99';
@@ -190,7 +190,6 @@ on develop => sub {
         requires 'Dist::Zilla::Plugin::CheckMetaResources';
         requires 'Dist::Zilla::Plugin::CheckPrereqsIndexed';
         requires 'Dist::Zilla::Plugin::CheckSelfDependency';
-        requires 'Dist::Zilla::Plugin::CheckStrictVersion';
         requires 'Dist::Zilla::Plugin::Code::AfterBuild';
         requires 'Dist::Zilla::Plugin::Code::FileMunger', '0.007';
         requires 'Dist::Zilla::Plugin::Code::LicenseProvider';
